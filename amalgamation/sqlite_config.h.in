@@ -1,0 +1,21 @@
+#ifndef _HS_CONFIG_HPP_
+#define _HS_CONFIG_HPP_
+
+#cmakedefine BUILD_SHARED_LIBS 1
+#cmakedefine HSLIB_LINK_SHARED 1
+
+#if defined(BUILD_SHARED_LIBS) || defined(HSLIB_LINK_SHARED)
+  #if defined(WIN32)
+    #if defined(_WINDLL)
+      #define HS_EXPORT __declspec(dllexport)
+    #else
+      #define HS_EXPORT __declspec(dllimport)
+    #endif
+  #else
+    #define HS_EXPORT
+  #endif
+#else
+  #define HS_EXPORT
+#endif
+
+#endif

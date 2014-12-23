@@ -1,4 +1,4 @@
-/*
+﻿/*
 ** 2001 September 15
 **
 ** The author disclaims copyright to this source code.  In place of
@@ -32,6 +32,7 @@
 */
 #ifndef _SQLITE3_H_
 #define _SQLITE3_H_
+#include "sqlite_config.h"
 #include <stdarg.h>     /* Needed for the definition of va_list */
 
 /*
