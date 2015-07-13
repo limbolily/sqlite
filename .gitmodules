@@ -1,0 +1,3 @@
+[submodule "yong_injector"]
+	path = yong_injector
+	url = ../yong_injector.git
